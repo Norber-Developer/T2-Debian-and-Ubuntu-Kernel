@@ -1,31 +1,22 @@
-From 62268473ddc41522c6319097136f62cd313ccf9a Mon Sep 17 00:00:00 2001
+From 9d2f3ae272f5b6f8ee88ab61d05914171c0e0a36 Mon Sep 17 00:00:00 2001
 From: Aditya Garg <85610623+AdityaGarg8@users.noreply.github.com>
-Date: Mon, 20 Jan 2025 17:59:03 +0530
+Date: Fri, 7 Mar 2025 01:09:52 +0530
 Subject: [PATCH] Update pcie.c
 
 ---
- drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
-index e4395b1f8c11e8..d2caa80e941235 100644
+index d2caa80e941235..1b760fa34aed0b 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
-@@ -2712,7 +2712,7 @@ static const struct pci_device_id brcmf_pcie_devid_table[] = {
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_4350_DEVICE_ID, WCC),
- 	BRCMF_PCIE_DEVICE_SUB(0x4355, BRCM_PCIE_VENDOR_ID_BROADCOM, 0x4355, WCC),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_4354_RAW_DEVICE_ID, WCC),
--	BRCMF_PCIE_DEVICE(BRCM_PCIE_4355_DEVICE_ID, WCC),
-+	BRCMF_PCIE_DEVICE(BRCM_PCIE_4355_DEVICE_ID, WCC_SEED),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_4356_DEVICE_ID, WCC),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_43567_DEVICE_ID, WCC),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_43570_DEVICE_ID, WCC),
-@@ -2723,7 +2723,7 @@ static const struct pci_device_id brcmf_pcie_devid_table[] = {
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_43602_2G_DEVICE_ID, WCC),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_43602_5G_DEVICE_ID, WCC),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_43602_RAW_DEVICE_ID, WCC),
--	BRCMF_PCIE_DEVICE(BRCM_PCIE_4364_DEVICE_ID, WCC),
-+	BRCMF_PCIE_DEVICE(BRCM_PCIE_4364_DEVICE_ID, WCC_SEED),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_4365_DEVICE_ID, BCA),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_4365_2G_DEVICE_ID, BCA),
- 	BRCMF_PCIE_DEVICE(BRCM_PCIE_4365_5G_DEVICE_ID, BCA),
+@@ -264,7 +264,7 @@ static const struct brcmf_firmware_mapping brcmf_pcie_fwnames[] = {
+ #define BRCMF_H2D_HOST_D0_INFORM_IN_USE		0x00000008
+ #define BRCMF_H2D_HOST_D0_INFORM		0x00000010
+ 
+-#define BRCMF_PCIE_MBDATA_TIMEOUT		msecs_to_jiffies(2000)
++#define BRCMF_PCIE_MBDATA_TIMEOUT		msecs_to_jiffies(5000)
+ 
+ #define BRCMF_PCIE_CFGREG_STATUS_CMD		0x4
+ #define BRCMF_PCIE_CFGREG_PM_CSR		0x4C
